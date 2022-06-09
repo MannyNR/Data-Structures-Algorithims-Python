@@ -1,4 +1,4 @@
-#Intro to Big O:
+# Intro to Big O:
 
 """
 Big O is a way of comparing 2 sets of code mathematically and seeing how efficient they run.
@@ -15,7 +15,7 @@ The thing about time complexity that is interesting is that it is not measured i
 """
 
 
-#Space Complexity:
+# Space Complexity:
 
 """
 There is also space complexity which measures the amount of memory/ram code is using. So even though ie code 1 is faster, if the company needs it to work with less capable devices or speed is not the priority it will be better to consider code that works best in space complexity.
@@ -43,7 +43,6 @@ Big O is technically worst case however, some people refer to Omega as best case
 """
 
 
-
 # Big O: O(n)
 
 
@@ -65,7 +64,7 @@ O(n) on a graph will always be a straight line and thus called "Proportional". S
 # def print_items(n):
 #   for i in range(n):
 #     print(i)
-    
+
 #   for j in range(n):
 #     print(j)
 
@@ -77,5 +76,46 @@ So for i this ran n times and this was also the case for j. Which would make thi
 """
 
 
+# Big O: O(n^2) ("O of N squared")
 
-# Big O: O(n^2)
+# def print_items(n):
+#   for i in range(n):
+#     for j in range(n):
+#       print(i,j)
+      
+# print_items(10)
+
+"""
+O(n^2) or "O of n squared" (n* n = n^2) is typically seen in nested for loops like the example above. However given we simplify if there was another or even multiple other for loops nested in there instead of being O(n^3 or higher) we would simplify it to O(n^2).
+
+def print_items(n):
+  for i in range(n):
+    for j in range(n):
+      for k in range(n):
+        print(i,j,k)
+      
+print_items(10)
+
+^^^^
+Still O(n^2)
+
+Given the multiple processes time complexity here is less efficient than in O(n)
+"""
+
+
+
+# Drop Non-Dominants
+
+def print_items(n):
+  for i in range(n):
+    for j in range(n):
+      print(i,j)
+  
+  for k in range(n):
+    print (k)
+      
+print_items(10)
+
+"""
+Here we have O(n^2) for the nested i,j loop and O(n) for the k for loop which will be O(n^2+ n). But because O(n^2) is more significant in operations it is the dominant term, thus we drop the non-dominant term and simplify this to O(n^2)
+"""
