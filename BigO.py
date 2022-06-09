@@ -43,14 +43,7 @@ Big O is technically worst case however, some people refer to Omega as best case
 """
 
 
-# Big O: O(n)
-
-
-# def print_items(n):
-#   for i in range(n):
-#     print(i)
-
-# print_items(10)
+# O(n) a.k.a Proportional:
 
 """
 In this example we take n and pass it the number 10 and ran this operation n times(10). What ever n is, is the number of operations.
@@ -58,8 +51,23 @@ In this example we take n and pass it the number 10 and ran this operation n tim
 O(n) on a graph will always be a straight line and thus called "Proportional". So if I hear proportional they are talking about O(n)
 """
 
+# def print_items(n):
+#   for i in range(n):
+#     print(i)
 
-# Drop Constants
+# print_items(10)
+
+
+
+
+# Drop Constants:
+
+"""
+So for i this ran n times and this was also the case for j. Which would make this n+n=2n or O(2n) but we can simplify this by dropping the 2 and write it as O(n). 
+
+So no matter what the constant is, it can be O(100n), O(10n) etc, we simplify it to O(n).
+
+"""
 
 # def print_items(n):
 #   for i in range(n):
@@ -70,23 +78,13 @@ O(n) on a graph will always be a straight line and thus called "Proportional". S
 
 # print_items(10)
 
-"""
-So for i this ran n times and this was also the case for j. Which would make this n+n=2n or O(2n) but we can simplify this by dropping the 2 and write it as O(n). So no matter what the constant is, it can be O(100n), O(10n) etc, we simplify it to O(n).
+
+
+
+# O(n^2) a.k.a "O of n squared" :
 
 """
-
-
-# Big O: O(n^2) ("O of N squared")
-
-# def print_items(n):
-#   for i in range(n):
-#     for j in range(n):
-#       print(i,j)
-      
-# print_items(10)
-
-"""
-O(n^2) or "O of n squared" (n* n = n^2) is typically seen in nested for loops like the example above. However given we simplify if there was another or even multiple other for loops nested in there instead of being O(n^3 or higher) we would simplify it to O(n^2).
+O(n^2) or "O of n squared" (n* n = n^2) is typically seen in nested for loops like the example below. However given we simplify if there was another or even multiple other for loops nested in there instead of being O(n^3 or higher) we would simplify it to O(n^2).
 
 def print_items(n):
   for i in range(n):
@@ -102,20 +100,45 @@ Still O(n^2)
 Given the multiple processes time complexity here is less efficient than in O(n)
 """
 
-
-
-# Drop Non-Dominants
-
-def print_items(n):
-  for i in range(n):
-    for j in range(n):
-      print(i,j)
-  
-  for k in range(n):
-    print (k)
+# def print_items(n):
+#   for i in range(n):
+#     for j in range(n):
+#       print(i,j)
       
-print_items(10)
+# print_items(10)
+
+
+
+# Drop Non-Dominants:
 
 """
-Here we have O(n^2) for the nested i,j loop and O(n) for the k for loop which will be O(n^2+ n). But because O(n^2) is more significant in operations it is the dominant term, thus we drop the non-dominant term and simplify this to O(n^2)
+Here we have O(n^2) for the nested i,j loop and O(n) for the k for loop which will be O(n^2 + n). But because O(n^2) is more significant in operations it is the dominant term, thus we drop the non-dominant(n) term and simplify this to O(n^2)
 """
+
+# def print_items(n):
+#   for i in range(n):
+#     for j in range(n):
+#       print(i,j)
+  
+#   for k in range(n):
+#     print (k)
+      
+# print_items(10)
+
+
+
+
+# O(1) a.k.a "Constant Time":
+
+"""
+Known as the most efficient and optimal of the Big O since even as it increases, the number of operations is going to remain constant. 
+
+It's just one operation, and even if its the function below, it gets simplified to O(1). 
+ 
+def add_items(n):
+  return n + n + n
+
+If looked at on a Big O graph, O(1) will be a flat straight line across the bottom.
+"""
+def add_items(n):
+  return n + n
