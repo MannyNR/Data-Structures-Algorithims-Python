@@ -22,8 +22,7 @@
 """
 
 # Tip Big O a.k.a:
-  # Big O is technically worst case however, some people refer to Omega as best case big O, and Theta as average case big O.
-
+# Big O is technically worst case however, some people refer to Omega as best case big O, and Theta as average case big O.
 
 
 # Omega - Theta - Big O:
@@ -56,7 +55,6 @@
 # print_items(10)
 
 
-
 # Drop Constants:
 
 """
@@ -74,7 +72,6 @@
 #     print(j)
 
 # print_items(10)
-
 
 
 # O(n^2) a.k.a "O of n squared" :
@@ -100,7 +97,7 @@
 #   for i in range(n):
 #     for j in range(n):
 #       print(i,j)
-      
+
 # print_items(10)
 
 
@@ -114,10 +111,10 @@
 #   for i in range(n):
 #     for j in range(n):
 #       print(i,j)
-  
+
 #   for k in range(n):
 #     print (k)
-      
+
 # print_items(10)
 
 
@@ -207,10 +204,9 @@ third time halving:
 """
   Used mostly in some Sorting Algorithms like Merge Sort and Quick Sort since this is the most efficient that you can make a sorting algorithms that are not just numbers. If in case you are sorting through strings and or other types of data types, O(nlog n) is probably your most efficient solution.  
 """
-  
-# Tip on O(n log n): 
-  # Not usually used other than in Merge Sort and Quick Sort when dealing with strings, mixed data types.
 
+# Tip on O(n log n):
+# Not usually used other than in Merge Sort and Quick Sort when dealing with strings, mixed data types.
 
 
 # Big O: Different Terms for Inputs
@@ -219,11 +215,11 @@ third time halving:
   Some Interviers will do a gotcha question where they would take a normal for loop and add more than one parameter.
 
 """
-  
+
 # def print_items(n):
 #   for i in range(n):  => is O(n)
 #     print(i)
-  
+
 #   for j in range(n):  => is O(n)
 #     print(j)               ------
 
@@ -235,7 +231,7 @@ third time halving:
 # def print_items(a, b):
 #   for i in range(a):
 #     print(i)
-    
+
 #   for j in range(b):
 #     print(j)
 
@@ -247,7 +243,7 @@ third time halving:
 # def print_items(a, b):
 #   for i in range(a):  => O(a)
 #     print(i)
-    
+
 #   for j in range(b):  => O(b)
 #     print(j)             ----
 #                         O(a + b)
@@ -262,7 +258,6 @@ third time halving:
 #     for j in range(b):  => O(b)
 #       print(i,j)           -------
 #                           O(a * b)
-
 
 
 #  Big O Lists:
@@ -310,11 +305,11 @@ third time halving:
 
   So if we are removing or adding an element to a list where the front or "0 index" is changed like the examples above this is O(n).
 """
-# Tip Big O for list.pop() or list.insert() to first and last index in a list: 
-  # If adding or removing from the end O(1), and if doing the same but in the beginning where element at 0 index is changed and a reindex happen, that is O(n)
+# Tip Big O for list.pop() or list.insert() to first and last index in a list:
+# If adding or removing from the end O(1), and if doing the same but in the beginning where element at 0 index is changed and a reindex happen, that is O(n)
 
 
-# Adding or removing from a list(not at index 0 or at the end): 
+# Adding or removing from a list(not at index 0 or at the end):
 """
   If adding or removing an element from the middle (anywhere not at index 0 or the end of the list) this causes a reindexing and can be noted as O(n). 
 
@@ -322,7 +317,7 @@ third time halving:
 """
 
 
-#Looking for a specific item in a list:
+# Looking for a specific item in a list:
 """
   If we have a piece of code written to look for a specific item by value in a list that will be O(n) since we have to iterate through the list using a for loop to find the value.
 
