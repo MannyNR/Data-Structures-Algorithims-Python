@@ -2,7 +2,7 @@
 
 # Overview
 """
-  A link list is like a normal list in Python however it DOES NOT have any indexes.
+  A link list is like a normal list in Python however it DOES NOT have any built in indexes.
   
   Another important difference is that in a traditional list, each element is stored in a contiguos place in memory (The elements are all stored next to each other in memory). This is not the case in a link list, in a linked list the nodes are going to be stored all over the place. 
   
@@ -17,12 +17,51 @@ In memory they are all stored next to each other so if we were to run an id chec
                ⬇         ⬇
   LinkList =  11➡️ 3➡️ 23➡️ 7➡️ (Null)
   
-  (➡️ = Next)
+  (➡️ = Next/Pointer)
   
   Here we can see a link list has a head which points to the next element in memory that follows it. Each element pointing to the next leaving the tail last which points to Null(None/Nothing).
   
   In memory it wont be a straight line similar to a regular list. The ids will be all over the place but what keeps the list in order is the head pointing to the next nodes in the linked list. 
 """
+
+
+
+# Nodes in Linked List:
+"""
+  A good way to think of a node in a linked list is to think of it like a dictionary. A node is the value and also the pointer '➡️'. So '11➡️' is a node.
+  
+  Given such when we see this below:
+              HEAD         TAIL       
+               ⬇            ⬇           
+  LinkList =  11➡️ 3➡️ 23➡️ 7➡️ 4➡️ (Null)
+  
+
+  We can think of it this way:
+            HEAD                
+              ⬇  
+head =   {
+           "value": 11,
+           "next": {
+                     "value": 3,
+                     "next": {
+                               "value": 23,
+                               "next":  {
+                                          "value": 7,
+                                          "next": {
+                                                    "value": 4,
+                                                    "next": None
+                                                  }      ⬆️
+                                         }             TAIL
+                               } 
+                     }
+           }
+  
+So even though the syntax for a linked list is not written like the nested dictionaries above, we can think of it that way. A set of nested dictionaries.
+
+Proper syntax for a linked list would be something like this in code:
+print(my_linked_list.head.next.next.value) # Would print 23
+"""
+
 
 
 
