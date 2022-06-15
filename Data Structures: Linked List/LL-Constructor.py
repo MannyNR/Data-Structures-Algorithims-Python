@@ -1,5 +1,5 @@
 """
-class LinkedListExample:
+class LinkedList:
   def __init__(self, value): 
     Initializes the new linked list and also creates a new Node. 
     (Self parameter) This is a method inside of a class instead of a regular function. 
@@ -15,9 +15,8 @@ class LinkedListExample:
 
 All of these methods create a new Node so we can create a class (class Node below) which will create the node for us whenever any of the above methods is called on. 
 
-class Node: just needs self.value and self.next.
+class Node: just needs the constructor (def __init__(self, value):)self.value and self.next since all we need it to do is just create a new node.
 """
-
 
 class Node:
     def __init__(self, value):
